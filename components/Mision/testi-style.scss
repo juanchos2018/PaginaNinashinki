@@ -1,0 +1,28 @@
+.root {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    @include breakpoints-up(sm) {
+        padding: spacing(0, 8)
+    }
+}
+
+.item {
+    padding: spacing(0, 1);
+    @include breakpoints-up(sm) {
+        padding: spacing(7, 1, 0)
+    }
+    &:focus {
+        outline: none
+    }
+}
+
+.prev {
+    @include left(0)
+}
+
+.next {
+    @include right(0)
+}

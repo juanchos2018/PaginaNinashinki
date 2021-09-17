@@ -1,0 +1,128 @@
+$cross-deco: '/images/redjuveninpng.png';
+.desc {
+    padding: $spacing2;
+    p {
+        overflow: hidden;
+        height: 50px;
+    }
+    h6 {
+        font-family: "Lato", sans-serif !important;
+        font-weight: $font-bold
+    }
+    .button {
+        width: 100%;
+        border-width: 2px;
+    }
+}
+
+.rating {
+    i {
+        color: #FFC107
+    }
+}
+
+
+/* Category Card */
+
+.category-card {
+    border-radius: 16px;
+    margin-bottom: $spacing1;
+    overflow: hidden;
+    position: relative;
+    text-transform: none !important;
+    padding: 0 !important;
+    background: $palette-secondary-light;
+    text-align: center;
+    display: flex;
+    @include use-theme(box-shadow, 0 1.5px 12px 2px rgba(0, 0, 0, 0.06), (0px 1px 3px 0px rgba(64, 64, 64, 1), 0px 1px 1px 0px rgba(42, 42, 42, 1), 0px 2px 1px -1px rgba(20, 20, 20, 1)));
+    &.v-btn--contained:not(.v-btn--round).v-size--default {
+        height: 250px;
+        @include breakpoints-down(xs) {
+            height: 150px;
+        }
+    }
+     ::v-deep .v-btn__content {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .figure {
+        margin: 0;
+        display: block;
+        @include margin-left(-2px);
+        img {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+.card-wrap {
+    position: relative;
+}
+
+
+/* Testimonial Cards */
+
+.testimonial {
+    height: 260px;
+    overflow: visible;
+    @include palette-background-paper;
+    border-radius: $spacing1;
+    border: 3px solid;
+    @include palette-divider;
+    padding: spacing(4, 2);
+    @include breakpoints-up(sm) {
+        padding: $spacing8
+    }
+    position: relative;
+    .icon {
+        border-Radius: 20px;
+        transform: rotate(45deg);
+        background: $palette-primary-main;
+        width: 70px;
+        height: 70px;
+        top: -30px;
+        @include left(32px);
+        position: absolute;
+        text-align: center;
+        line-height: 100px;
+        @include breakpoints-down(xs) {
+            display: none
+        }
+        i {
+            transform: rotate(-45deg);
+            font-size: 70px;
+            vertical-align: top;
+            color: $palette-common-white;
+        }
+    }
+    h6 {
+        font-weight: $font-bold
+    }
+    .text {
+        margin-bottom: $spacing4;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        height: $spacing9
+    }
+}
+
+.caption-title {
+    @include palette-text-secondary
+}
+
+@mixin fold {
+    content: "";
+    position: absolute;
+    border-radius: 16px;
+    border: 1px solid;
+    @include palette-divider;
+    @include palette-background-paper;
+    height: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    @include use-theme(box-shadow, 0 1.5px 12px 2px rgba(0, 0, 0, 0.06), (0px 1px 3px 0px rgba(64, 64, 64, 1), 0px 1px 1px 0px rgba(42, 42, 42, 1), 0px 2px 1px -1px rgba(20, 20, 20, 1)))
+}
