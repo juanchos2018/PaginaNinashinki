@@ -22,17 +22,21 @@
         </section>
 
         <br><br><br>
+        <!-- Fotos -->
         <section
           id="our-expertise"
           :class="[isTablet ? 'space-top-short' : 'space-top']"
         >
           <expertise v-bind:data="itemFotosOranizaciones" />
         </section>
+        <!-- videos -->
         <section
           id="testimonials"
         :class="[isTablet ? 'space-top-short' : 'space-top']"
         >
-          <testimonials />
+          <!-- <testimonials /> -->
+           
+            <services2  v-bind:data="itemVideosOrganizacion"/>
         </section>
 
         <br><br><br>
@@ -125,6 +129,8 @@ import SquareParallax from '~/components/Parallax/Square'
 import VideoBanner from '~/components/VideoBanner'
 import About from '~/components/About'
 import Services from '~/components/Services'
+import Services2 from '~/components/Services/Services2'
+
 import Expertise from '~/components/Expertise'
 import Testimonials from '~/components/Testimonials'
 import CaseStudies from '~/components/CaseStudies'
@@ -151,6 +157,7 @@ export default {
     VideoBanner,
     About,
     Services,
+    Services2,
     Expertise,
     Testimonials,
     CaseStudies,
@@ -164,8 +171,9 @@ export default {
   data(){
     return{
       itemEventos:[],
-              itemEspacios:[],
-      itemFotosOranizaciones:[]
+      itemEspacios:[],
+      itemFotosOranizaciones:[],
+      itemVideosOrganizacion:[],
     }
   },
   computed: {
@@ -181,6 +189,7 @@ export default {
     this.ListEventosOrganizacion();
     this.ListFotosOrganizaciones();
     this.ListEspacios();
+    this.videos();
     this.$vuetify.theme.dark = true;
   },
   methods:{
@@ -226,6 +235,21 @@ export default {
         }).catch((error) => {
                 console.log(error);
         });
+    },
+     videos() {
+      let me = this
+      let tipo = 'videos'
+      let url = this.url_base + 'Control/Peticiones2.php?'
+      axios({
+        method: 'GET',
+        url: url
+      })
+        .then(function(response) {          
+          me.itemVideosOrganizacion = response.data.result
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
   },
   head() {

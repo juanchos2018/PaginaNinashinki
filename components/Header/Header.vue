@@ -75,7 +75,8 @@
                 tag="ul"
               >
                    <li>
-                    <NuxtLink to="/">
+                    <NuxtLink to="/"  style="color: #FFFFFF;
+    text-decoration: none;">
                  <v-btn
                       class="anchor-link "
                       href="#"                   
@@ -85,7 +86,8 @@
                     </v-btn>
                </NuxtLink>
 
-                    <NuxtLink to="/Conocenos">
+                    <NuxtLink to="/Conocenos"  style="color: #FFFFFF;
+    text-decoration: none;">
                  <v-btn
                       class="anchor-link "
                       href="#"                   
@@ -94,7 +96,8 @@
                       Conocenos
                     </v-btn>
             </NuxtLink>        
-                    <NuxtLink to="/Conocenos">
+                    <NuxtLink to="/Conocenos"  style="color: #FFFFFF;
+    text-decoration: none;">
                  <v-btn
                       class="anchor-link "
                       href="#"                   
@@ -104,7 +107,8 @@
                     </v-btn>
             </NuxtLink>                        
 
-                <NuxtLink to="/contact">
+                <NuxtLink to="/contact"  style="color: #FFFFFF;
+    text-decoration: none;">
                   <v-btn  href="#home">Sumate a la Movida</v-btn>
                 </NuxtLink>
                 
@@ -124,21 +128,18 @@
                   <v-list>
                     <v-list-item
                       v-for=" item in itemEspacios"
-                     :key="item.id_espacio"                      
+                     :key="item.id_espacio"                     
                     >
-                    <NuxtLink  :to="{name:'Espacio___en',params:{id:item.id_espacio}}" >
-
-                      <a href="">
-                           <v-list-item-title>{{ item.nombre_espacio }}</v-list-item-title>
-                      </a>
-                     
-                  </NuxtLink>                   
-                
+                    <NuxtLink  style="color: #FFFFFF;
+    text-decoration: none;" :to="{name:'Espacio___en',params:{id:item.id_espacio}}" >
+                     <v-list-item-title>{{ item.nombre_espacio }}</v-list-item-title>  
+                     </NuxtLink>  
                     </v-list-item>
                   </v-list>
                 </v-menu>              
 
-               <NuxtLink to="/EquipoTecnico">
+               <NuxtLink to="/EquipoTecnico"  style="color: #FFFFFF;
+    text-decoration: none;">
                   <v-btn  href="#home">Equipo Tecnico</v-btn>
                 </NuxtLink>                 
                 </li>   
@@ -148,6 +149,8 @@
           </nav>
         </div>
       </v-container>
+
+
     </v-app-bar>
   </fragment>
 </template>
@@ -163,7 +166,7 @@ import brand from '~/static/text/brand'
 import navMenu from './menu'
 import Settings from './Settings'
 import MobileMenu from './MobileMenu'
-import axios from  'axios';
+import axios from 'axios'
 import { mapState } from 'vuex'
 
 let counter = 0
@@ -186,8 +189,7 @@ export default {
     invert: {
       type: Boolean,
       default: false
-    },
-  
+    }
   },
   data() {
     return {
@@ -205,25 +207,27 @@ export default {
         createData(navMenu[2], '#' + navMenu[2]),
         createData(navMenu[3], '#' + navMenu[3], -40)
       ],
-      itemEspacios:[]
+      itemEspacios: []
     }
   },
   mounted() {
     this.loaded = true
-    this.ListEspacios();
+    this.ListEspacios()
   },
   methods: {
-     ListEspacios(){
-         let me = this;       
-           let url = me.url_base+"Control/espacioList.php";
-        axios({
-            method: "GET",
-            url: url,            
-        }).then(function (response) {           
-             me.itemEspacios = response.data;
-        }).catch((error) => {
-                console.log(error);
-        });
+    ListEspacios() {
+      let me = this
+      let url = me.url_base + 'Control/espacioList.php'
+      axios({
+        method: 'GET',
+        url: url
+      })
+        .then(function(response) {
+          me.itemEspacios = response.data
+        })
+        .catch(error => {
+          console.log(error)
+        })
     },
     handleScroll: function() {
       if (window.scrollY > 80) {
@@ -239,8 +243,7 @@ export default {
     }
   },
   computed: {
-
-      ...mapState(["url_base"]),
+    ...mapState(['url_base']),
     isMobile() {
       const smDown = this.$store.state.breakpoints.smDown
       return smDown.indexOf(this.$mq) > -1

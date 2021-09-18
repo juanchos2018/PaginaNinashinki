@@ -1,7 +1,170 @@
 <template>
   <div>
     <div class="main-wrap">
-      <main-header />
+
+      <!-- <main-header /> -->
+
+      <fragment>
+    <v-navigation-drawer
+      v-if="isMobile"
+      v-model="openDrawer"
+      fixed
+      temporary
+      class="mobile-nav"
+    >
+      <mobile-menu :open="openDrawer" />
+    </v-navigation-drawer>
+    <v-app-bar
+      v-scroll="handleScroll"
+      id="header"
+      :class="{ fixed: fixed, 'open-drawer': openDrawer }"
+      class="header"
+      fixed
+      app
+    >
+      <v-container :class="{ 'fixed-width': mdUp }">
+        <div class="header-content">
+          <nav
+            :class="{ invert: invert }"
+            class="nav-logo"
+          >
+            <v-btn
+              v-if="isMobile"
+              :class="{ 'is-active': openDrawer }"
+              class="hamburger hamburger--spin mobile-menu"
+              text
+              icon
+              @click.stop="handleToggleOpen"
+            >
+              <span class="hamburger-box">
+                <span class="bar hamburger-inner" />
+              </span>
+            </v-btn>
+            <div class="logo">
+              <nuxt-link
+                v-if="invert"
+                :to="link.agency.home"
+                
+              >
+                <!-- <img
+                  :src="logo"
+                  alt="logo"
+                > -->
+              NinashunKu
+              </nuxt-link>
+              <scrollactive
+                v-if="!invert && loaded"
+                tag="span"
+              >
+                <a
+                  href="#home"
+                  class="anchor-link scrollactive-item"
+                >
+                  <!-- <img
+                    :src="logo"
+                    alt="logo"
+                  > -->
+                  NinashunKu
+                </a>
+              </scrollactive>
+            </div>
+          </nav>
+          <nav
+            :class="{ invert: invert }"
+            class="nav-menu"
+          >
+            <div v-if="isDesktop">
+              <scrollactive
+                v-if="loaded"
+                :offset="navOffset"
+                active-class="active"
+                tag="ul"
+              >
+                   <li>
+                    <NuxtLink to="/"
+                     style="color: #FFFFFF;
+    text-decoration: none;">
+                 <v-btn
+                      class="anchor-link "
+                      href="#"                   
+                      text                     
+                    >
+                     Inicio
+                    </v-btn>
+               </NuxtLink>
+
+                    <NuxtLink to="/Conocenos"  style="color: #FFFFFF;
+    text-decoration: none;">
+                 <v-btn
+                      class="anchor-link "
+                      href="#"                   
+                      text                     
+                    >
+                      Conocenos
+                    </v-btn>
+            </NuxtLink>        
+                    <NuxtLink to="/Conocenos"  style="color: #FFFFFF;
+    text-decoration: none;">
+                 <v-btn
+                      class="anchor-link "
+                      href="#"                   
+                      text                     
+                    >
+                         Otras Miradas
+                    </v-btn>
+            </NuxtLink>                        
+
+                <NuxtLink to="/contact"  style="color: #FFFFFF;
+    text-decoration: none;">
+                  <v-btn  href="#home">Sumate a la Movida</v-btn>
+                </NuxtLink>
+                
+                <v-menu open-on-hover offset-y>
+                  <template v-slot:activator="{ on, attrs }">                         
+                    <v-btn
+                      href="#home"
+                      class="anchor-link "
+                        color="primary"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      Espacios Culturales
+                    </v-btn>                    
+                 
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for=" item in itemEspacios"
+                     :key="item.id_espacio"                     
+                    >                   
+
+                      <a
+                  href="#"
+                  style="color: #FFFFFF;
+    text-decoration: none;"
+                >
+                      <v-list-item-title @click="RecargarPagina(item.id_espacio)">{{ item.nombre_espacio }}</v-list-item-title>
+                           </a>
+                      </v-list-item>
+                  </v-list>
+                </v-menu>              
+
+               <NuxtLink to="/EquipoTecnico"  style="color: #FFFFFF;
+    text-decoration: none;">
+                  <v-btn  href="#home">Equipo Tecnico</v-btn>
+                </NuxtLink>                 
+                </li>   
+              </scrollactive>
+            </div>
+            <!-- <setting-menu :invert="invert" /> -->
+          </nav>
+        </div>
+      </v-container>
+
+      
+    </v-app-bar>
+  </fragment>
+
       <div class="container-wrap">
         <square-parallax />
 
@@ -330,22 +493,15 @@
       <hidden point="mdDown">
         <page-nav />
       </hidden>
-      <main-footer />
-    
-    </div>
-
-
-    
+      <main-footer />    
+    </div>    
   <vue-easy-lightbox
        v-if="loaded"
       :visible="visible"
       :imgs="imgs"
       :index="index"
       @hide="handleHide"
-    />
-
-
-    
+    />    
   <vue-easy-lightbox
        v-if="loaded2"
       :visible="visible2"
@@ -388,6 +544,7 @@
 <style lang="scss" scoped>
 @import './about-style.scss';
 @import '@/components/Title/title-style.scss';
+@import '@/components/Header/header-style.scss';
 
 </style>
 
@@ -427,6 +584,13 @@ export default {
     Mision,
 CardGaleria,
     'main-footer': Footer
+  },
+   props: {
+    invert: {
+      type: Boolean,
+      default: false
+    },
+  
   },
   computed: {
     ...mapState(['url_base']),
@@ -497,10 +661,19 @@ CardGaleria,
       itemNoticias:[],
       index:0,
       index2:0, 
+       itemEspacios:[],
+
+
+         section: 0,
+      fixed: false,
+      openDrawer: null,
+      navOffset: 20,
+      
    
    }
   },
   mounted(){
+    this.ListEspacios();
       this.loaded = true   
       this.loaded2= true   
       this.idespacio =  this.$route.params.id;
@@ -521,7 +694,33 @@ CardGaleria,
              this.SentVisitante(this.idespacio)         
     } 
   },
+   watch: {
+    $route() {
+      this.getRows()
+    }
+  },
   methods:{
+    RecargarPagina(idespacio){
+            this.InfoEspacio(idespacio)
+            this.fotos(idespacio);
+            this.videos(idespacio)     
+            this.noticias(idespacio)      
+            this.SentVisitante(idespacio)   
+    },
+     ListEspacios() {
+      let me = this
+      let url = me.url_base + 'Control/espacioList.php'
+      axios({
+        method: 'GET',
+        url: url
+      })
+        .then(function(response) {
+          me.itemEspacios = response.data
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
      handleVideoOpen(id) {
       this.videoId = id
       this.dialog = true
@@ -654,7 +853,19 @@ CardGaleria,
         }).catch((error) => {
                 console.log(error);
         });
-    }
+    },
+      handleScroll: function() {
+        if (window.scrollY > 80) {
+          return (this.fixed = true)
+        }
+        return (this.fixed = false)
+      },
+      setOffset: function(offset) {
+        this.navOffset = offset
+      },
+      handleToggleOpen: function() {
+        this.openDrawer = !this.openDrawer
+      }
   },
   head() { 
 

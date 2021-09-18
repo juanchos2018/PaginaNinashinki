@@ -9,7 +9,7 @@
         class="notification"
       >
         <div class="action">
-          Message Sent
+          Mensaje Enviado !
         </div>
         <v-btn
           text
