@@ -6,11 +6,8 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner />
+          <video-banner :img="defaulimg" />
         </section>
-
-
-
 
         <!-- <section
           id="about"
@@ -18,22 +15,14 @@
         >
           <about />
         </section> -->
-        
-        <dots-parallax />      
-      
-      
 
-      
-       
-     
-      
+        <dots-parallax />
       </div>
-      
+
       <hidden point="mdDown">
         <page-nav />
       </hidden>
       <main-footer />
-    
     </div>
   </div>
 </template>
@@ -103,23 +92,33 @@ export default {
     VideoBanner,
     About,
     Services,
-    Expertise,     
+    Expertise,
     PageNav,
-    Hidden,   
-    'main-footer': Footer
+    Hidden,
+    'main-footer': Footer,
+  },
+  data() {
+    return {
+      defaulimg: './images/logonia.png',
+    }
   },
   computed: {
     isTablet() {
-      return this.$mq === 'mdDown' || this.$mq === 'smDown' || this.$mq === 'xsDown' // eslint-disable-line
+      return (
+        this.$mq === 'mdDown' || this.$mq === 'smDown' || this.$mq === 'xsDown'
+      ) // eslint-disable-line
     },
     isMobile() {
       return this.$mq === 'smDown' || this.$mq === 'xsDown'
-    }
+    },
+  },
+  mounted() {
+    this.$vuetify.theme.dark = true
   },
   head() {
     return {
-      title: 'NinashunKu'+ ' - Equipo Tecnico'
+      title: 'NinashunKu' + ' - Equipo Tecnico',
     }
-  }
+  },
 }
 </script>

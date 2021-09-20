@@ -217,16 +217,17 @@ export default {
 
 
   mounted() {
+    this.$vuetify.theme.dark = true;
     this.loaded = true
   //  this.ListEspacios();
    this.idespacio =  this.$route.params.id
   
    if (this.idespacio) {
-      this.ListVideo(this.idespacio)
+       this.ListVideo(this.idespacio)
         localStorage.setItem("idespacio",this.idespacio)  
        // this.SentVisitante(this.idespacio)
-         this.InfoEspacio(this.idespacio)
-          this.SentVisitante(this.idespacio)
+       this.InfoEspacio(this.idespacio)
+       this.SentVisitante(this.idespacio)
    }
  else  if (this.idespacio==undefined) {
         this.idespacio =   localStorage.getItem('idespacio')

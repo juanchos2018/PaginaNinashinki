@@ -17,6 +17,10 @@ export default {
     Contacto,
     Decoration
   },
+  mounted(){
+         this.$vuetify.theme.dark = true;
+
+  },
   head() {
     return {
       title: 'NinashunKu' + ' -Sumate'

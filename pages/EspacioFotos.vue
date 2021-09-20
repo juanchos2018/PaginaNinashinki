@@ -187,6 +187,8 @@ export default {
 
 
   mounted() {
+    this.$vuetify.theme.dark = true;
+
     this.loaded = true
   //  this.ListEspacios();
    this.idespacio =  this.$route.params.id

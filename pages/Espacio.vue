@@ -673,6 +673,7 @@ CardGaleria,
    }
   },
   mounted(){
+    this.$vuetify.theme.dark = true;
     this.ListEspacios();
       this.loaded = true   
       this.loaded2= true   

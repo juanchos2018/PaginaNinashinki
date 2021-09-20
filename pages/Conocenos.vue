@@ -6,7 +6,8 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner />
+            <video-banner :img="defaulimg" />
+          <!-- <video-banner /> -->
         </section>
       <section>
               <div class="root1">  
@@ -162,6 +163,7 @@ export default {
   },
   data() {
     return {
+      defaulimg:'./images/logonia.png',
       imgAPI: imgAPI,
       imagnes_uno: '/images/DSC00695.JPG',
       imagnes_dos: '/images/isc lima - Isaac Peñaherrera.jpg',
@@ -169,6 +171,10 @@ export default {
         'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.'
     }
   },
+  mounted(){
+     this.$vuetify.theme.dark = true;
+  },
+
   head() {
     return {
       title: 'NinashunKu'+ ' - Conocenos'
