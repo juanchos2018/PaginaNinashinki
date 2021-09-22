@@ -163,7 +163,7 @@ export default {
   },
   data() {
     return {
-      defaulimg:'./images/logonia.png',
+      defaulimg:'./images/logojuvenil.png',
       imgAPI: imgAPI,
       imagnes_uno: '/images/DSC00695.JPG',
       imagnes_dos: '/images/isc lima - Isaac Peñaherrera.jpg',

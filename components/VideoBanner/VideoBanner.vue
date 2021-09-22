@@ -99,7 +99,7 @@ export default {
     },   
     img:{
       type:String,
-      default:'./images/logonia.png'
+      default:'./images/logojuvenil.png'
     }
   
    

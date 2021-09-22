@@ -99,7 +99,7 @@ export default {
   },
   data() {
     return {
-      defaulimg: './images/logonia.png',
+      defaulimg: './images/logojuvenil.png',
     }
   },
   computed: {

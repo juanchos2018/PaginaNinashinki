@@ -44,7 +44,7 @@
                   :src="logo"
                   alt="logo"
                 > -->
-              NinashunKu
+            Red G. Juvenil
               </nuxt-link>
               <scrollactive
                 v-if="!invert && loaded"
@@ -58,7 +58,7 @@
                     :src="logo"
                     alt="logo"
                   > -->
-                  NinashunKu
+                 Red G. Juvenil
                 </a>
               </scrollactive>
             </div>
