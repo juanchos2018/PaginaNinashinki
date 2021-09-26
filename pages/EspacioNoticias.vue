@@ -6,7 +6,7 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner :img="url_base+ imgFotoEspacio" />
+          <video-banner :img="url_base+ imgFotoEspacio"   :ColorEspaciovideo="ColorEspacio" />
         </section>
   <section>
  
@@ -170,7 +170,7 @@ export default {
   },
   data() {
     return {
-
+    ColorEspacio:'#2196f3',
        visible: false,
       loaded: false,
        index:0,
@@ -222,6 +222,7 @@ export default {
         .then(function(response) {         
               me.imgFotoEspacio=response.data.result.photo;
               me.NombreEspacio = response.data.result.nombre_espacio
+              me.ColorEspacio=response.data.result.color;
            //   me.VisionEspacio = response.data.result.vision
             //  me.MisonEspacio = response.data.result.mision
            //   me.ojetivo = response.data.result.objetivo
@@ -274,7 +275,7 @@ export default {
   },
   head() {
     return {
-    title:  'NinashunKu' + this.NombreEspacio+' - Noticias'
+    title: this.NombreEspacio+' - Noticias'
     }
   }
 }

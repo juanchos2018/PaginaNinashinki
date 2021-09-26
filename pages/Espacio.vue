@@ -169,7 +169,7 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner :img="url_base+ imgFotoEspacio" />
+          <video-banner :img="url_base+ imgFotoEspacio" :ColorEspaciovideo="ColorEspacio" />
         </section>
       <section>
           <div class="root1">  
@@ -651,8 +651,9 @@ CardGaleria,
         'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.',
       idespacio:0,
       NombreEspacio: '',
-      MisonEspacio:'',
+      MisonEspacio:'',  
       VisionEspacio:'',
+      ColorEspacio:'#2196f3',
       ojetivo:' La problemática que se desea trabajar es la falta de oportunidades que tiene la juventud en todos los ámbitos del desarrollo personal, con la desvalorización de la cultura, la falta de formación, experiencia laboral, desarrollo de habilidades y destrezas',
       historia:'lorem  lorem lorem lorem ',
       imgFotoEspacio:'',
@@ -807,6 +808,7 @@ CardGaleria,
               me.MisonEspacio = response.data.result.mision
               me.ojetivo = response.data.result.objetivo
               me.historia = response.data.result.historia
+              me.ColorEspacio=response.data.result.color;
         })
         .catch(error => {
           console.log(error)
@@ -871,7 +873,7 @@ CardGaleria,
   head() { 
 
     return {
-      title: 'NinashunKu' + '-' +this.NombreEspacio
+      title: 'Red-G.-Juvenil' + '-' +this.NombreEspacio
     }
   }
 }

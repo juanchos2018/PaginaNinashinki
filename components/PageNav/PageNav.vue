@@ -4,32 +4,7 @@
     :class="{ show: show }"
     class="page-nav"
   >
-    <nav class="section-nav">
-      <scrollactive
-        :offset="navOffset"
-        active-class="active"
-        tag="section"
-      >
-        <a
-          v-for="(item, index) in menuList"
-          :key="index"
-          :style="{ top: 50 * (menu.length - item.id) + 'px' }"
-          :href="item.url"
-          class="anchor-link scrollactive-item"
-          @click="setOffset(item.offset)"
-        >
-          <v-tooltip
-            :nudge-top="23"
-            left
-          >
-            <template v-slot:activator="{ on }">
-              <span v-on="on">{{ $t('agencyLanding.header_'+item.name) }}</span>
-            </template>
-            <span class="tooltip">{{ $t('agencyLanding.header_'+item.name) }}</span>
-          </v-tooltip>
-        </a>
-      </scrollactive>
-    </nav>
+   
     <v-tooltip
       :nudge-top="25"
       left
@@ -48,7 +23,7 @@
           </v-btn>
         </scrollactive>
       </template>
-      <span class="tooltip">To Top</span>
+      <span class="tooltip">Arriba</span>
     </v-tooltip>  
   </div>
 </template>

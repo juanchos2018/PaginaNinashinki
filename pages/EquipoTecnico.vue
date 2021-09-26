@@ -16,69 +16,55 @@
               <div class="massonry">
                 <u-animate-container>
                   <v-row>
-                    <v-card class="" max-width="434" tile>
+                       <v-col cols="6" lg="4"
+                        sm="6"   class="pa-sm-6 pa-2"   v-for="item in itemequiopos"
+                        :key="item.id_equipo"
+                        >
+                   <v-card                  
+                    max-width="350"
+                    outlined
+                  >
+                    <v-list-item three-line>
+                      <v-list-item-content>
                       
-                      <v-img
-                        height="100%"
-                        src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+                        <v-list-item-title class="text-h5 mb-1">
+                          {{item.nombre}}
+                        </v-list-item-title>
+
+                        <v-list-item-subtitle>{{item.descripcion}}</v-list-item-subtitle>
+                      </v-list-item-content>
+
+                        <v-avatar
+                        color="primary"
+                        size="100"
+                         class="ma-3"
+                      >
+                      <v-img :src="url_base+item.photo"></v-img>
+
+                      </v-avatar>
+                      <!-- <v-list-item-avatar
+                        tile
+                        size="80"
+                        color="grey"
                       >
                       
-                        <v-row align="end" class="fill-height">
-
-                          <v-col align-self="start" class="pa-0" cols="6">
-                            <v-avatar
-                              class="profile"
-                              color="grey"
-                              size="164"
-                              tile
-                            >
-                              <v-img
-                                src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                                  alt="Avatar"
-                              ></v-img>
-                            </v-avatar>
-                         
-                          </v-col>
-
-                          <v-col >
-                            <v-list-item color="rgba(0, 0, 0, .4)" dark>
-                              <v-list-item-content>
-                                <v-list-item-title class="text-h6">
-                                  Marcus Obrien
-                                </v-list-item-title>
-                                <v-list-item-subtitle
-                                  >Network Engineer</v-list-item-subtitle
-                                >
-                              </v-list-item-content>
-                            </v-list-item>
-                          </v-col>
-                          
-                           <v-col  align-self="top"  >
-                            <v-list-item color="rgba(0, 0, 0, .4)" dark>
-                              <v-list-item-content>
-                                <v-list-item-title class="text-h6">
-                                  Mdesdes
-                                </v-list-item-title>
-                                <v-list-item-subtitle
-                                  >Network Engineer</v-list-item-subtitle
-                                >
-                              </v-list-item-content>
-                            </v-list-item>
-                          </v-col>
-
-                        </v-row>
-
-
-                     
-
-                      </v-img>
                       
-                    </v-card>
+                      </v-list-item-avatar> -->
+                    </v-list-item>
+
+                    <v-card-actions>
+                      
+                    </v-card-actions>
+                  </v-card>
+                     </v-col>  
                   </v-row>
                 </u-animate-container>
               </div>
             </v-container>
           </div>
+
+
+         
         </section>
 
         <br /><br /><br />
@@ -124,6 +110,8 @@ import imgAPI from '~/static/images/imgAPI'
 //import Mision from '@/components/Mision/Mision'
 //import Necesidad from '@/components/Necesidad/Necesidad'
 //import TestiCard from '@/components/Cards/Vision'
+import { mapState } from 'vuex'
+import axios from  'axios';
 
 export default {
   components: {
@@ -139,6 +127,7 @@ export default {
     'main-footer': Footer,
   },
   computed: {
+    ...mapState(["url_base"]),
     isTablet() {
       return (
         this.$mq === 'mdDown' || this.$mq === 'smDown' || this.$mq === 'xsDown'
@@ -162,15 +151,35 @@ export default {
       imagnes_dos: '/images/isc lima - Isaac Peñaherrera.jpg',
       objetivo:
         'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.',
+      itemequiopos:[]
     }
   },
   mounted() {
     this.$vuetify.theme.dark = true
+    this.listEquipos();
+  },
+  methods:{
+    
+    listEquipos(){
+      let me = this;       
+      let url =me.url_base+ "Control/Equipo.php";
+      axios({
+        method: "GET",
+        url: url,
+      })
+        .then(function(response) {
+          me.itemequiopos = response.data;
+        ///  console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 
   head() {
     return {
-      title: 'NinashunKu' + ' - Conocenos',
+      title: 'Red-G.-Juvenil' + ' - Equipo',
     }
   },
 }

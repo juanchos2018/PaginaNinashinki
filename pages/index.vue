@@ -254,7 +254,7 @@ export default {
   },
   head() {
     return {
-      title: 'NinashunKu'+ ' - Inicio'
+      title: 'Red-G.-Juvenil'+ ' - Inicio'
     }
   }
 }

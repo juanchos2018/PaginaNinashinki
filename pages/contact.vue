@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: 'NinashunKu' + ' -Sumate'
+      title: 'Red-G.-Juvenil' + ' -Sumate'
     }
   }
 }

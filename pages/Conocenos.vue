@@ -6,7 +6,7 @@
         <square-parallax />
 
         <section id="home">
-            <video-banner :img="defaulimg" />
+            <video-banner :img="defaulimg"  :ColorEspaciovideo="ColorEspacio" />
           <!-- <video-banner /> -->
         </section>
       <section>
@@ -163,6 +163,7 @@ export default {
   },
   data() {
     return {
+      ColorEspacio:'#2196f3',
       defaulimg:'./images/logojuvenil.png',
       imgAPI: imgAPI,
       imagnes_uno: '/images/DSC00695.JPG',
@@ -177,7 +178,7 @@ export default {
 
   head() {
     return {
-      title: 'NinashunKu'+ ' - Conocenos'
+      title: 'Red-G.-Juvenil'+ ' - Conocenos'
     }
   }
 }

@@ -34,7 +34,7 @@
           class="pa-6"
         >
           <div class="video-wrap">
-            <div class="video-figure">
+            <div class="video-figure" :style="colorEspacio">
               <div class="inner-figure">
                 <hidden point="mdDown">
                   <v-btn
@@ -76,6 +76,43 @@
 
 <style lang="scss" scoped>
 @import './banner-style.scss';
+.video-figure {
+    border-radius: 80px;
+    overflow: hidden;
+    position: absolute;
+    width: 1040px;
+    height: 840px;
+    top: 0;
+    @include left(0);
+    .v-application--is-rtl & {
+        box-shadow: 30px 20px 0px 0px $palette-primary-main;
+    }
+    .v-application--is-ltr & {
+        box-shadow: var(--box-shadow); 
+    }
+    @include breakpoints-up(sm) {
+        top: -920px;
+        @include left(-110px);
+        .v-application--is-rtl & {
+            transform: rotate(75deg);
+        }
+        .v-application--is-ltr & {
+            transform: rotate(-75deg);
+        }
+    }
+    @include breakpoints-up(md) {
+        .v-application--is-rtl & {
+            transform: rotate(45deg);
+        }
+        .v-application--is-ltr & {
+            transform: rotate(-45deg);
+        }
+        width: 1200px;
+        top: -650px;
+        @include left(-200px);
+    }
+}
+
 </style>
 
 <script>
@@ -88,7 +125,7 @@ export default {
   components: {
     Hidden
   },
-    props: {
+  props: {
     TituloPagina: {
       type: String,
       default: 'NinashunKu'
@@ -100,8 +137,11 @@ export default {
     img:{
       type:String,
       default:'./images/logojuvenil.png'
-    }
-  
+    },
+    ColorEspaciovideo:{
+      type:String,
+      default:'#2196f3'
+    }  
    
   },
   data() {
@@ -131,7 +171,8 @@ export default {
       yt: youtube,
       play: false,
       playCtrl: true,
-      cover: imgAPI.agency[0]
+      cover: imgAPI.agency[0],
+      colorDefault:'#C93E25',
     }
   },
    mounted() {  
@@ -171,6 +212,11 @@ export default {
   },
   computed: {
      ...mapState(["url_base"]),
+   colorEspacio() {
+      return {        
+         '--box-shadow': "-30px 20px 0px 0px "+this.ColorEspaciovideo       
+      }
+    },
     player() {
       return this.$refs.youtube.player
     },

@@ -6,7 +6,7 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner :img="url_base+ imgFotoEspacio" />
+          <video-banner :img="url_base+ imgFotoEspacio" :ColorEspaciovideo="ColorEspacio" />
         </section>
   <section>
  
@@ -181,7 +181,8 @@ export default {
       imagnes_uno: '/images/DSC00695.JPG',
       imagnes_dos: '/images/isc lima - Isaac Peñaherrera.jpg',
       objetivo:
-        'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.'
+        'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.',
+     ColorEspacio:'#2196f3',
     }
   },
 
@@ -239,6 +240,7 @@ export default {
         .then(function(response) {         
               me.imgFotoEspacio=response.data.result.photo;
               me.NombreEspacio = response.data.result.nombre_espacio
+              me.ColorEspacio=response.data.result.color;
            //   me.VisionEspacio = response.data.result.vision
             //  me.MisonEspacio = response.data.result.mision
            //   me.ojetivo = response.data.result.objetivo
@@ -275,7 +277,7 @@ export default {
   },
   head() {
     return {
-      title: 'NinashunKu' + ' -Fotos'
+      title: 'Red-G.-Juvenil' + ' -Fotos'
     }
   }
 }
