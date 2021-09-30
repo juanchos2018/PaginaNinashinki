@@ -169,7 +169,7 @@ export default {
         rel: 0,
         showinfo: 0,
         mute: 1,
-        origin: 'http://localhost:8001'
+        origin: 'https://identidadesjuveniles.org'
       },
         modeliPordata:{ 
              id_portada:0,
@@ -180,7 +180,7 @@ export default {
               id_videoventoespacio :'',
               nombre_video       :'',
               id_video        :'',             
-              $tarea:'',
+              tarea:'',
               fecha  :''  
 
       },
