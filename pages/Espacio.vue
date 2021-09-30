@@ -169,30 +169,36 @@
         <square-parallax />
 
         <section id="home">
-          <video-banner :img="url_base+ imgFotoEspacio" :ColorEspaciovideo="ColorEspacio" />
+          <video-banner :img="url_base+ imgFotoEspacio" :ColorEspaciovideo="ColorEspacio"   :linkfacebook="linkfacebook" />
         </section>
+
+
+           
       <section>
-          <div class="root1">  
+       
+          <div class="root2" :style="colorEspaciocom">  
+             
               <v-container class="fixed-width">        
                       <div class="massonry" >
 
+                      
                           <u-animate-container>
                                 <v-row>
                               <v-col md="6" cols="12" class="illu-wrap">
                                   <hidden point="smDown">
-                                  <div class="illustration one" />
-                                  <figure class="illustration two">
+                                  <div class="illustration2 one" :style="colorEspacioIlustra" />
+                                  <figure class="illustration2 two" :style="colorEspacioIlustra">
                                       <img :src="imagnes_uno" alt="about" />
                                   </figure>
                                   <br>
-                                  <figure class="illustration three">
+                                  <figure class="illustration2 three" :style="colorEspacioIlustra" >
                                       <img :src="imagnes_uno" alt="about"/>
                                   </figure>
                                   <br>
-                                  <figure class="illustration four">
+                                  <figure class="illustration2 four" :style="colorEspacioIlustra" >
                                       <img :src="imagnes_uno" alt="about">
                                   </figure>
-                                  <div class="illustration five" />
+                                  <div class="illustration2 five" :style="colorEspacioIlustra"  />
                                   </hidden>
                               </v-col>
                               <v-col md="6" cols="12">
@@ -203,6 +209,8 @@
                                   duration="0.6s"
                                   >
                                   <div>
+
+                                    
                                   <div class="title-about">
                                       <h3 class="use-text-title">
                                           <span>objetivo</span>
@@ -220,6 +228,7 @@
                 </v-container>                
             </div>
       </section>
+    <br><br><br>
        <section>
            <mision :mision="MisonEspacio" :vision="VisionEspacio" /> 
       </section>
@@ -253,8 +262,6 @@
        </center>   
     </section>
   <br><br><br>
-
-
 
 
 
@@ -546,6 +553,78 @@
 @import '@/components/Title/title-style.scss';
 @import '@/components/Header/header-style.scss';
 
+.root2 {
+    background: url($pattern) repeat var(--background);
+    background-size: 10%;
+    position: relative;
+    color: $palette-common-white;
+    padding: spacing(10, 0);
+    @include breakpoints-down(xs) {
+        text-align: center;
+        padding: spacing(3, 0);
+    }
+    p {
+        margin-bottom: $spacing5
+    }
+    .v-btn.white {
+        min-width: 180px;
+        font-size: 18px;
+        color: $palette-primary-dark !important;
+    }
+}
+.illustration2 {
+    margin-top: 20px;
+    box-shadow: 0 0px 18px 0 rgba(0, 0, 0, 0.17);
+    position: absolute;
+    border: 15px  var(--border);
+    background: var(--background2);
+    border-radius: 25px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    img {
+        height: 105%;
+        .v-application--is-ltr & {
+            transform: translateX(-20%)rotate(-45deg) scale(1.3);
+        }
+        .v-application--is-rtl & {
+            transform: translateX(20%)rotate(-45deg) scale(1.3);
+        }
+    }
+    &.one {
+        border-radius: 15px;
+        width: 60px;
+        height: 60px;
+        top: -10px;
+        @include left(100px);
+    }
+    &.two {
+        width: 180px;
+        height: 180px;
+        top: -10px;
+        @include left(300px);
+    }
+    &.three {
+        width: 160px;
+        height: 160px;
+        top: 130px;
+        @include left(50px);
+        left: 50px
+    }
+    &.four {
+        width: 210px;
+        height: 210px;
+        bottom: -40px;
+        @include left(250px);
+        left: 250px
+    }
+    &.five {
+        border-radius: 15px;
+        width: 60px;
+        height: 60px;
+        bottom: -30px;
+        @include right(10px);
+    }
+}
 </style>
 
 <script>
@@ -594,6 +673,22 @@ CardGaleria,
   },
   computed: {
     ...mapState(['url_base']),
+    colorEspaciocom(){
+      return {        
+         '--background': "repeat "+this.ColorEspacio       
+      }
+    },
+    colorEspacioIlustra(){
+      return {        
+         '--border': "solid "+this.ColorEspacio2,
+          '--background2': this.ColorEspacio2         
+      }
+    },
+     colorbackground(){
+      return {        
+         '--backgroundsss': this.ColorEspacio2       
+      }
+    },
     isTablet() {
       return (
         this.$mq === 'mdDown' || this.$mq === 'smDown' || this.$mq === 'xsDown'
@@ -653,7 +748,10 @@ CardGaleria,
       NombreEspacio: '',
       MisonEspacio:'',  
       VisionEspacio:'',
+      linkfacebook:'',
+
       ColorEspacio:'#2196f3',
+      ColorEspacio2:'#2196f3',
       ojetivo:' La problemática que se desea trabajar es la falta de oportunidades que tiene la juventud en todos los ámbitos del desarrollo personal, con la desvalorización de la cultura, la falta de formación, experiencia laboral, desarrollo de habilidades y destrezas',
       historia:'lorem  lorem lorem lorem ',
       imgFotoEspacio:'',
@@ -663,9 +761,7 @@ CardGaleria,
       index:0,
       index2:0, 
        itemEspacios:[],
-
-
-         section: 0,
+      section: 0,
       fixed: false,
       openDrawer: null,
       navOffset: 20,
@@ -693,7 +789,7 @@ CardGaleria,
             this.fotos(this.idespacio);
             this.videos(this.idespacio);
             this.noticias(this.idespacio) 
-             this.SentVisitante(this.idespacio)         
+            this.SentVisitante(this.idespacio)         
     } 
   },
    watch: {
@@ -802,6 +898,7 @@ CardGaleria,
         url: url
       })
         .then(function(response) {         
+          console.log(response)
               me.imgFotoEspacio=response.data.result.photo;
               me.NombreEspacio = response.data.result.nombre_espacio
               me.VisionEspacio = response.data.result.vision
@@ -809,6 +906,8 @@ CardGaleria,
               me.ojetivo = response.data.result.objetivo
               me.historia = response.data.result.historia
               me.ColorEspacio=response.data.result.color;
+              me.ColorEspacio2= response.data.result.color2
+              me.linkfacebook=response.data.result.linkfacebook
         })
         .catch(error => {
           console.log(error)

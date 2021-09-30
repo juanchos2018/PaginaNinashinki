@@ -25,6 +25,18 @@
              Mensaje
               <v-icon class="icon">mdi-send</v-icon>
             </v-btn>
+ <a :href="linkfacebook" target="_blank">   
+  <v-btn
+              outlined
+              large
+              color="secondary"
+              class="button"
+            >
+             
+             <span class="ion-social-facebook icon" />
+            </v-btn>
+            </a>  
+           
           </div>
         </v-col>
         <v-col
@@ -141,6 +153,10 @@ export default {
     ColorEspaciovideo:{
       type:String,
       default:'#2196f3'
+    },
+    linkfacebook:{
+      type: String,
+      default: 'https://www.facebook.com/nina.shunku/'
     }  
    
   },
