@@ -12,7 +12,7 @@
             <testi-card
               :text="mision"
               name="Mision"
-            
+             :color="color"
             />
             
           </div>
@@ -26,6 +26,7 @@
             <testi-card
               :text="vision"
               name="Vision"
+              :color="color"
           
             />
             
@@ -58,6 +59,10 @@ export default {
       type: String,
       default:
         'Conocer, reconocer, articular y potenciar los dialogamos para generar injerencia en el barrio a través del arte y la cultura con jóvenes con ganas de aprender atendemos a la población juvenil como prioritaria promoviendo la unificación de estos sectores vulnerables para el desarrollo de PYMES'
+    },
+    color: {
+      type: String,
+      default: '#2196f3'
     }
   },
 

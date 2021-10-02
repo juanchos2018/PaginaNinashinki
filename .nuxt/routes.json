@@ -2,325 +2,325 @@
   {
     "name": "index___ar",
     "path": "/ar",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "blank-page___en",
     "path": "/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___en",
     "path": "/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___en",
     "path": "/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "index___de",
     "path": "/de",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "EquipoTecnico___en",
     "path": "/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___en",
     "path": "/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___en",
     "path": "/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___en",
     "path": "/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___en",
     "path": "/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "index___id",
     "path": "/id",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "index___pt",
     "path": "/pt",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "index___zh",
     "path": "/zh",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "blank-page___ar",
     "path": "/ar/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___ar",
     "path": "/ar/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___ar",
     "path": "/ar/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "EquipoTecnico___ar",
     "path": "/ar/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___ar",
     "path": "/ar/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___ar",
     "path": "/ar/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___ar",
     "path": "/ar/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___ar",
     "path": "/ar/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "blank-page___de",
     "path": "/de/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___de",
     "path": "/de/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___de",
     "path": "/de/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "EquipoTecnico___de",
     "path": "/de/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___de",
     "path": "/de/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___de",
     "path": "/de/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___de",
     "path": "/de/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___de",
     "path": "/de/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "blank-page___id",
     "path": "/id/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___id",
     "path": "/id/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___id",
     "path": "/id/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "EquipoTecnico___id",
     "path": "/id/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___id",
     "path": "/id/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___id",
     "path": "/id/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___id",
     "path": "/id/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___id",
     "path": "/id/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "blank-page___pt",
     "path": "/pt/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___pt",
     "path": "/pt/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___pt",
     "path": "/pt/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "EquipoTecnico___pt",
     "path": "/pt/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___pt",
     "path": "/pt/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___pt",
     "path": "/pt/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___pt",
     "path": "/pt/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___pt",
     "path": "/pt/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "blank-page___zh",
     "path": "/zh/blank-page",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\blank-page.vue",
     "chunkName": "pages/blank-page"
   },
   {
     "name": "Conocenos___zh",
     "path": "/zh/Conocenos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Conocenos.vue",
     "chunkName": "pages/Conocenos"
   },
   {
     "name": "contact___zh",
     "path": "/zh/contact",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact"
   },
   {
     "name": "EquipoTecnico___zh",
     "path": "/zh/EquipoTecnico",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EquipoTecnico.vue",
     "chunkName": "pages/EquipoTecnico"
   },
   {
     "name": "Espacio___zh",
     "path": "/zh/Espacio",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\Espacio.vue",
     "chunkName": "pages/Espacio"
   },
   {
     "name": "EspacioFotos___zh",
     "path": "/zh/EspacioFotos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioFotos.vue",
     "chunkName": "pages/EspacioFotos"
   },
   {
     "name": "EspacioNoticias___zh",
     "path": "/zh/EspacioNoticias",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioNoticias.vue",
     "chunkName": "pages/EspacioNoticias"
   },
   {
     "name": "EspacioVideos___zh",
     "path": "/zh/EspacioVideos",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\EspacioVideos.vue",
     "chunkName": "pages/EspacioVideos"
   },
   {
     "name": "index___en",
     "path": "/",
-    "component": "C:\\\\xampp\\\\htdocs\\\\PaginaNinashinki\\\\pages\\\\index.vue",
+    "component": "C:\\\\laragon\\\\www\\\\proyectoLeydi\\\\PaginaNinashinki\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   }
 ]

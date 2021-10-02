@@ -171,17 +171,12 @@
         <section id="home">
           <video-banner :img="url_base+ imgFotoEspacio" :ColorEspaciovideo="ColorEspacio"   :linkfacebook="linkfacebook" />
         </section>
-
-
            
       <section>
        
-          <div class="root2" :style="colorEspaciocom">  
-             
+          <div class="root2" :style="colorEspaciocom">               
               <v-container class="fixed-width">        
-                      <div class="massonry" >
-
-                      
+                      <div class="massonry" >                      
                           <u-animate-container>
                                 <v-row>
                               <v-col md="6" cols="12" class="illu-wrap">
@@ -208,9 +203,7 @@
                                   name="fadeInRight"
                                   duration="0.6s"
                                   >
-                                  <div>
-
-                                    
+                                  <div>                                    
                                   <div class="title-about">
                                       <h3 class="use-text-title">
                                           <span>objetivo</span>
@@ -230,7 +223,7 @@
       </section>
     <br><br><br>
        <section>
-           <mision :mision="MisonEspacio" :vision="VisionEspacio" /> 
+           <mision :mision="MisonEspacio" :vision="VisionEspacio" :color="ColorEspacio2" /> 
       </section>
   <br><br><br>     
     
@@ -317,14 +310,20 @@
               >
                 <div class="card-wrap">
                   <span class="fold"></span>
-                
-                  <card-galeria
+                     <card-svg                                            
+                          title="mas fotos"                          
+                           size="mediun"
+                           :colorsvg="'fill:'+ColorEspacio2"   
+                           :simple="false"                      
+                          :show-img="() => IraTodasFotos()"
+                        /> 
+                    <!-- <card-galeria
                           bg="/images/iconofotos.png"                 
                           title="mdsas fotos"                          
                           size="mediun"
                           :simple="false"
                           :show-img="() => IraTodasFotos()"
-                        />
+                        /> -->
                          <span class="property">
                       <span class="title-category">Todos los Fotos</span>
                       <v-icon>mdi-arrow-right</v-icon>
@@ -372,6 +371,7 @@
                            size="mediun"                         
                           :show-img="() => handleVideoOpen(item.idvideo)"
                         />  
+                        
                       </div>
                     </u-animate>
               </v-col>  
@@ -433,7 +433,8 @@
                       delay="0.2s"
                       duration="0.4s"
                     >
-                      <div >                    
+                      <div >     
+                                     
                           <card-galeria
                           :bg="url_base+item.photo"                        
                           :title="item.titulo"                          
@@ -456,13 +457,20 @@
                 <div class="card-wrap">
                   <span class="fold"></span>
                 
-                  <card-galeria
+                      <!-- <card-galeria
                           bg="/images/iconofotos.png"                 
-                          title="mdsas fotos"                          
+                          title="mas fotos"                          
                           size="mediun"
                           :simple="false"
                           :show-img="() => IraTodasNoticias()"
-                        />
+                        /> -->
+                          <card-svg                                            
+                          title="mas noticias"                         
+                           size="mediun"
+                           :colorsvg="'fill:'+ColorEspacio2"   
+                           :simple="false"                      
+                           :show-img="() => IraTodasNoticias()"
+                        />   
                          <span class="property">
                       <span class="title-category">Todos las Noticias</span>
                       <v-icon>mdi-arrow-right</v-icon>
@@ -473,30 +481,20 @@
          </v-row>
            </div>
        </v-col>
-         </v-row>
-         
-
-        
+         </v-row>      
 
        </u-animate-container>        
   </v-container>
-
-
-
   <br><br>
- 
 
         <!-- <section
           id="about"
           :class="[isTablet ? 'space-top-short' : 'space-top']"
         >
           <about />
-        </section> -->
-        
-     
-      
-      </div>
-      
+        </section> -->  
+           
+      </div>      
       <hidden point="mdDown">
         <page-nav />
       </hidden>
@@ -646,6 +644,9 @@ import brand from '~/static/text/brand'
 import imgAPI from '~/static/images/imgAPI'
 import Mision from '@/components/Mision/Mision'
 import CardGaleria from '@/components/Cards/CardGaleria'
+import CardSvg from '@/components/Cards/CardSvg'
+import MobileMenu from '@/components/Header/MobileMenu'
+
 import { mapState } from 'vuex'
 import youtube from '@/youtube'
 
@@ -662,7 +663,9 @@ export default {
     Hidden, 
     Mision,
 CardGaleria,
-    'main-footer': Footer
+    'main-footer': Footer,
+    CardSvg,
+    MobileMenu
   },
    props: {
     invert: {
@@ -869,7 +872,7 @@ CardGaleria,
         data: data,
       })
         .then(function(response) {
-             console.log(response)
+             //console.log(response)
         })
         .catch((error) => {
           console.log(error);
@@ -950,7 +953,7 @@ CardGaleria,
             method: "GET",
             url: url,            
         }).then(function (response) {
-        console.log(response)
+          // console.log(response)
              me.itemNoticias = response.data.result;
         }).catch((error) => {
                 console.log(error);

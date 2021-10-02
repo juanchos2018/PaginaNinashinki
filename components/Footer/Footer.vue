@@ -85,7 +85,7 @@
         class="pa-4"
       >
         <div class="socmed">
-         <a href="https://www.facebook.com/nina.shunku/" target="_blank">   <v-btn
+         <a href="https://www.facebook.com/Red-de-Gesti%C3%B3n-Juvenil-106975174854927" target="_blank">   <v-btn
             text
             icon
             class="button"            

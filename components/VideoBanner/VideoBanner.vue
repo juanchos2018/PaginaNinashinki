@@ -25,14 +25,14 @@
              Mensaje
               <v-icon class="icon">mdi-send</v-icon>
             </v-btn>
- <a :href="linkfacebook" target="_blank">   
+ <a :href="linkfacebook" target="_blank" style="margin-left:7px">   
   <v-btn
               outlined
               large
               color="secondary"
               class="button"
             >
-             
+             Facebook
              <span class="ion-social-facebook icon" />
             </v-btn>
             </a>  
@@ -156,7 +156,7 @@ export default {
     },
     linkfacebook:{
       type: String,
-      default: 'https://www.facebook.com/nina.shunku/'
+      default: 'https://www.facebook.com/Red-de-Gesti%C3%B3n-Juvenil-106975174854927'
     }  
    
   },
