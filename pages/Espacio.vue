@@ -536,9 +536,12 @@
             :height="360"
             ref="youtube"
           />
+       
              <!-- <iframe    v-if="isDesktop"    id="youtube"  ref="youtube" type="text/html" width="640" height="360"
   :src="'https://www.youtube.com/embed/' +videoId +'?autoplay=0&origin=http://example.com'"
   frameborder="0"   />   -->
+
+
         </div>
       </v-card>
     </v-dialog>
@@ -825,6 +828,7 @@ CardGaleria,
      handleVideoOpen(id) {
       this.videoId = id
       this.dialog = true
+
       if (this.yt.use) {
         setTimeout(() => {
           this.player = this.$refs.youtube.player
@@ -834,7 +838,10 @@ CardGaleria,
     },
      handleVideoClose() {
       this.dialog = false
-      this.player.pauseVideo()
+      // if ( this.player.playVideo()) {
+            this.player.pauseVideo()
+      // }
+   
     },
     showImg(idfoto) {     
       this.index = this.itemFotosEspacios.findIndex(

@@ -126,14 +126,14 @@
 </style>
 
 <script>
-import logo from '~/static/images/logojuvenil.png'
+import logo from '~/static/images/logonia.png'
 import brand from '~/static/text/brand'
 import axios from  'axios';
 import { mapState } from 'vuex'
 
 export default {
   data: () => ({
-    titulo:'Red Gestion Juvenil',
+    titulo:'NinaShunku',
     subTitle:'Al momento que un joven administra un espacio el espacio se vuelve de jóvenes',
     fottercopyright:'Juan-LEYDI-Edgar',
     logo: logo,

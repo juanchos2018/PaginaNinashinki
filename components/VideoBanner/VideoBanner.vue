@@ -16,7 +16,7 @@
                   </div>
             </div>
            
-            <v-btn
+            <!-- <v-btn
               outlined
               large
               color="secondary"
@@ -24,10 +24,10 @@
             >
              Mensaje
               <v-icon class="icon">mdi-send</v-icon>
-            </v-btn>
- <a :href="linkfacebook" target="_blank" style="margin-left:7px">   
-  <v-btn
-              outlined
+            </v-btn> -->
+           <a :href="linkfacebook" target="_blank" style="margin-left:7px">   
+            <v-btn
+               outlined
               large
               color="secondary"
               class="button"
@@ -36,7 +36,20 @@
              <span class="ion-social-facebook icon" />
             </v-btn>
             </a>  
-           
+
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXaqEowvzTHikaN5TDTgySzoMEXZpsu8Br5tCNptwrYnHvfA/viewform" target="_blank" style="margin-left:7px">   
+            <v-btn
+               outlined
+              large
+              color="secondary"
+              class="button"
+            >
+             Registro
+   <v-icon class="icon">mdi-send</v-icon>
+            </v-btn>
+            </a>  
+           <!-- https://docs.google.com/forms/d/e/1FAIpQLSfXaqEowvzTHikaN5TDTgySzoMEXZpsu8Br5tCNptwrYnHvfA/viewform -->
           </div>
         </v-col>
         <v-col
