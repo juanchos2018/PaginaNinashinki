@@ -210,7 +210,7 @@
                                       </h3>
                                       </div>
                                       <p class="use-text.paragraph">
-                                      La problemática que se desea trabajar es la falta de oportunidades que tiene la juventud en todos los ámbitos del desarrollo personal, con la desvalorización de la cultura, la falta de formación, experiencia laboral, desarrollo de habilidades y destrezas.
+                                         {{objetivo}}     
                                       </p>                            
                                   </div>                            
                                   </u-animate>
@@ -748,8 +748,7 @@ CardGaleria,
       imgAPI: imgAPI,
       imagnes_uno: '/images/DSC00695.JPG',
       imagnes_dos: '/images/isc lima - Isaac Peñaherrera.jpg',
-      objetivo:
-        'Replantear los principios de las identidades juveniles hacia la toma de decisiones con respecto a la situación que atraviesa sus barrios, mediante  las prácticas y saberes de las culturas urbanas y ancestrales.',
+      objetivo: 'Replantear los principi',
       idespacio:0,
       NombreEspacio: '',
       MisonEspacio:'',  
